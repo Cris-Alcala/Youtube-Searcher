@@ -1,0 +1,37 @@
+<h2>¿Qué vas a buscar hoy?</h2>
+<div class="home-component">
+    <input type="text" placeholder="Título del video" #searchText (keyup.enter)="getVideos()">
+    <div class="videos">
+        <ul>
+            <li *ngFor="let video of videos">
+                <div class="card">
+                    <div class="image">
+                        <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                            <img src={{video.snippet.thumbnails.medium.url}} alt="Poster">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <p>{{video.snippet.title}}</p>
+                    </div>
+                    <div class="id">
+                        <p>{{video.id.videoId}}</p>
+                    </div>
+                    <div class="channel">
+                        <p><a href="https://www.youtube.com/channel/{{video.snippet.channelId}}" target="_blank">{{video.snippet.channelTitle}}</a></p>
+                    </div>
+                    <div class="description">
+                        <p>{{video.snippet.description}}</p>
+                    </div>
+                    <div class="date">
+                        <p>{{formatDate(video.snippet.publishedAt)}}</p>
+                    </div>
+                    <div class="like">
+                        <button (click)="addLiked(video)" [ngClass]="{'liked':checkLiked(video)}">
+                            <img src="../../../../assets/like.png" alt="Hearth Image">
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

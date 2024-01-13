@@ -1,1 +1,155 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    background: #0f0f0f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em;
+    padding-left: 6em;
+    margin: 1em;
+    box-shadow:
+    inset 0px 1px 20px .5px rgba(255, 0, 0, 0.404);
+    border-radius: 1em;
+}
+nav img {
+    width: 20%;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li {
+    list-style: none;
+}
+.home-component {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-top: 2em;
+    color: white;
+}
+.home-component input {
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.171);
+    border-radius: 1em;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 300ms;
+    outline: none;
+}
+.home-component input:focus {
+    border: 2px solid white;
+}
+.videos {
+    margin-top: 2em;
+    margin-left: -2em;
+}
+.videos ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.videos ul li {
+    list-style: none;
+}
+.image {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+.card {
+    max-width: 320px;
+    min-width: 320px;
+    min-height: 550px;
+    flex-grow: 1;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.224);
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.likedvideo {
+    min-height: 400px;
+}
+.card img {
+    border-radius: .5em;
+}
+.title {
+    padding-left: .5em;
+    padding-right: .5em;
+    color: white;
+}
+.id {
+    color: rgba(255, 255, 255, 0.204);
+    padding-left: .5em;
+    padding-right: .5em;
+}
+.channel {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+.channel a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.channel a:hover {
+    color: red;
+}
+.description {
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: .8em;
+}
+.date {
+    padding-left: .5em;
+    padding-right: .5em;
+    color: rgba(255, 255, 255, 0.204);
+}
+.like {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+.like button:hover {
+    background: red;
+    cursor: pointer;
+}
+.like button {
+    border: none;
+    transition: all 500ms;
+    padding: .5em;
+    border-radius: .5em;
+}
+.like img {
+    width: 10%;
+    background: transparent;
+}
+.liked {
+    background-color: red;
+}
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+h2 {
+    color: white;
+    text-align: center;
+    display: block;
+    text-shadow: 1px 1px 10px red;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

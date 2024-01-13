@@ -1,0 +1,23 @@
+<h1>Liked Videos</h1>
+<h2 *ngIf="likedVideos.length===0">No hay videos con me gusta</h2>
+<div class="videos" *ngIf="likedVideos.length!==0">
+    <ul>
+        <li *ngFor="let video of likedVideos">
+            <div class="card likedvideo">
+                <div class="image">
+                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                        <img src={{video.snippet.thumbnails.medium.url}} alt="Poster">
+                    </a>
+                </div>
+                <div class="title">
+                    <p>{{video.snippet.title}}</p>
+                </div>
+                <div class="like">
+                    <button (click)="addLiked(video)" [ngClass]="{'liked':checkLiked(video)}">
+                        <img src="../../../../assets/like.png" alt="Hearth Image">
+                    </button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
