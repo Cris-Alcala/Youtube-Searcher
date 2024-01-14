@@ -9,7 +9,7 @@ import { map } from 'rxjs';
 })
 export class YoutubeService {
   private endpoint:string = 'https://www.googleapis.com/youtube/v3/search';
-  private apiKey:string = '';
+  private apiKey:string = 'YOUR API KEY';
   videoList!:VideoList;
   likedVideos:Video[] = [];
 
